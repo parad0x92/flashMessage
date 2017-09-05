@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
 
     <!-- INCLUDE FLASH MESSAGES -->
-    <?php
+	<?php
 		include_once('./flashMessages/flashMessage.php');
 	?>
 
@@ -23,14 +23,14 @@
 		div.p-lin{white-space:pre-line;}
 		/* needed to center our 'horizontal flash messages' */
 		.row-centered {
-		    text-align:center;
+			text-align:center;
 		}
 		.col-centered {
-		    display:inline-block;
-		    float:none;
-		    /* reset the text-align */
-		    text-align:left;
-		    vertical-align: top;
+			display:inline-block;
+			float:none;
+			/* reset the text-align */
+			text-align:left;
+			vertical-align: top;
 		}
 		/*only to see red borders on this example for a better understanding*/
 		div#contentMessages{
@@ -70,7 +70,7 @@
 	<legend><span style="color:red">Horizontal Messages</span></legend>
 		<?php
 			//INSTANTIATE FLASH MESSAGE
-			  //$flash=new flashMessage();		//ALREADY instantiated before (line 58), moreover we don't need more than 1 div to display flash messages
+			  //$flash=new flashMessage();		//ALREADY instantiated before (line 62), moreover we don't need more than 1 div to display flash messages
 			//PRINT MESSAGES
 			echo($flash->getFlashes('horizontal'));
 		?>

@@ -4,13 +4,13 @@ Api to build flash messages and easly show them in frontend using bootstrap aler
 
 require_once 'flashMessages/flashMessage.php';  <br/>
 $flash=new flashMessage();  <br/>
-&nbsp;&nbsp;  $flash->success("Success Message);  <br/>
-&nbsp;&nbsp;  $flash->warning("Warning Message");  <br/>
-&nbsp;&nbsp;  $flash->error("Error Message");  <br/>
-&nbsp;&nbsp;  $flash->info("Info Message");  <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;      /  <br/>
-&nbsp;&nbsp;  $flash->getFlashes('horizontal');  <br/>
-&nbsp;&nbsp;  $flash->getFlashes();  <br/>
+&nbsp;&nbsp;&nbsp;  $flash->success("Success Message);  <br/>
+&nbsp;&nbsp;&nbsp;  $flash->warning("Warning Message");  <br/>
+&nbsp;&nbsp;&nbsp;  $flash->error("Error Message");  <br/>
+&nbsp;&nbsp;&nbsp;  $flash->info("Info Message");  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      /  <br/>
+&nbsp;&nbsp;&nbsp;  $flash->getFlashes('horizontal');  <br/>
+&nbsp;&nbsp;&nbsp;  $flash->getFlashes();  <br/>
 
 
 

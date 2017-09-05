@@ -18,7 +18,7 @@ $flash=new flashMessage();
 
 //Create array message
 $mssg= array(
-	"Antiguo" => array(
+    "Antiguo" => array(
         'name'  => 'perico',
         'email'  => 'perico@email.com',
         'password'  => 'pericoPassword',

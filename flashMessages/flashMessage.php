@@ -8,17 +8,17 @@ class flashMessage{
 	protected $id;			// counters to create flashes and also to read them
 
 	/**
-    * __construct
-    *
-    */
-   	public function __construct(){
-   		$this->flashes=array(
-		    'success' => array(),
-		    'warning' => array(),
-		    'error' => array(),
-		    'info' => array()
-   		);
-   		$this->tags=array(
+	* __construct
+	*
+	*/
+	public function __construct(){
+		$this->flashes=array(
+			'success' => array(),
+			'warning' => array(),
+			'error' => array(),
+			'info' => array()
+		);
+		$this->tags=array(
 			'info' => 'info',
 			'danger' => 'error',
 			'warning' => 'warning',
@@ -30,9 +30,9 @@ class flashMessage{
 			'error' => 0,
 			'info' => 0
 		);
- 	}
+	}
 
- 	/**
+	/**
      * Functions to create the flash messages using "setFlash()" function
      *  
      * @param  string/array $message 		Message text 
@@ -59,7 +59,7 @@ class flashMessage{
      * @param  string 		$type 		Type of message (success,warning,error,info)
      * 
      */
-	protected function setFlash($id ,$message, $type){
+	protected function setFlash($id, $message, $type){
 		$cookieName="flash_".$type."_";
 
 		if (is_array ($message))
@@ -78,8 +78,8 @@ class flashMessage{
 
 		$flag=false;
 
-   		//Free array flashes and reset the counters before fill it again
-   		$this->delFlashes();
+		//Free array flashes and reset the counters before fill it again
+		$this->delFlashes();
 
 		// Search for all the cookies
 		foreach($_COOKIE as $key => $value){
@@ -88,7 +88,7 @@ class flashMessage{
 					$this->flashes[$value2][$id[$value2]++] = $value;
 					setcookie($key, "", -1, '/'); //clear cookie and set expiration to the past
 					break;
-	        	}
+				}
 			}
 		}
 
@@ -97,17 +97,15 @@ class flashMessage{
 
 		if($flag){
 			switch ($type) {
-			    case 'vertical':
-			    	return $this->printFlashes();
-			        break;
-			    case 'horizontal':
-			    	return $this->printFlashesHorizontal();
-			        break;
+				case 'vertical':
+					return $this->printFlashes();
+					break;
+				case 'horizontal':
+					return $this->printFlashesHorizontal();
+					break;
 			}
 		}
 	}
- 	
-
 	
 	/**
      * Delete "$this->flashes" and reset "$this->id"
