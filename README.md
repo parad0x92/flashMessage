@@ -4,13 +4,13 @@ _USAGE_
 
 require_once 'flashMessages/flashMessage.php';
 $flash=new flashMessage();
-	$flash->success("Success Message);
-	$flash->warning("Warning Message");
-	$flash->error("Error Message");
-	$flash->info("Info Message");
-		/
-	$flash->getFlashes('horizontal');
-	$flash->getFlashes();
+  $flash->success("Success Message);
+  $flash->warning("Warning Message");
+  $flash->error("Error Message");
+  $flash->info("Info Message");
+      /
+  $flash->getFlashes('horizontal');
+  $flash->getFlashes();
 
 
 
